@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="country"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="name"/>
+            </userInfo>
+        </attribute>
+        <relationship name="days" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Day" inverseName="city" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <entity name="Day" representedClassName="Day" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="dt"/>
+            </userInfo>
+        </attribute>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="days" inverseEntity="City" syncable="YES"/>
+        <relationship name="temperature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Temperature" inverseName="day" inverseEntity="Temperature" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="main"/>
+            </userInfo>
+        </relationship>
+        <relationship name="weathers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weather" inverseName="day" inverseEntity="Weather" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="weather"/>
+            </userInfo>
+        </relationship>
+    </entity>
+    <entity name="Temperature" representedClassName="Temperature" syncable="YES">
+        <attribute name="maximum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="temp_max"/>
+            </userInfo>
+        </attribute>
+        <attribute name="minimum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="temp_min"/>
+            </userInfo>
+        </attribute>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="temperature" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <entity name="Weather" representedClassName="Weather" syncable="YES">
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="icon"/>
+            </userInfo>
+        </attribute>
+        <attribute name="main" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="main"/>
+            </userInfo>
+        </attribute>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="weathers" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-135" positionY="-54" width="128" height="103"/>
+        <element name="Day" positionX="52" positionY="-0" width="128" height="103"/>
+        <element name="Temperature" positionX="223" positionY="-45" width="128" height="88"/>
+        <element name="Weather" positionX="-135" positionY="180" width="128" height="103"/>
+    </elements>
+</model>
