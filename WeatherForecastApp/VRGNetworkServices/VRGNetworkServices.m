@@ -19,7 +19,7 @@
 - (void) GETRequestWithString:(NSString *)string {
     
     NSURL * url = [NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/forecast"];
-    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:[url absoluteString]
       parameters: @{ @"q" : string,
                      @"appid" : @"c8a748d3376c517affde7308e9128242" }
@@ -27,9 +27,9 @@
          success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
              
              [[NSManagedObjectContext MR_defaultContext] MR_saveWithBlock:^(NSManagedObjectContext * _Nonnull localContext) {
-                 NSDictionary * dictionary = responseObject;
-                 City * city = [City MR_importFromObject: dictionary[@"city"] inContext:[NSManagedObjectContext MR_defaultContext]];
-                 NSArray * dateArray = [Day MR_importFromArray: responseObject[@"list"] inContext:[NSManagedObjectContext MR_defaultContext]];
+                 NSDictionary *dictionary = responseObject;
+                 City *city = [City MR_importFromObject: dictionary[@"city"] inContext:[NSManagedObjectContext MR_defaultContext]];
+                 NSArray *dateArray = [Day MR_importFromArray: dictionary[@"list"] inContext:[NSManagedObjectContext MR_defaultContext]];
                  city.days = [NSOrderedSet orderedSetWithArray:dateArray];
                  
                  [(NSObject *)self.delegate performSelectorOnMainThread:@selector(citiesLoaded:)

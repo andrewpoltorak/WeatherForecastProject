@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City+CoreDataClass.h"
 
 @interface ViewControllerWeather : UIViewController
+
+- (instancetype)initWithCity: (City *) city;
 
 @end

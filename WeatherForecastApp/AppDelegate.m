@@ -21,9 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupCoreDataStack];
     self.window = [UIWindow new];
-    UITabBarController * tabBarController = [[UITabBarController alloc] init];
-    ViewControllerSearchCity * viewControllerSearch = [ViewControllerSearchCity new];
-    ViewControllerSevedCities * viewControllerSave = [ViewControllerSevedCities new];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    ViewControllerSearchCity *viewControllerSearch = [ViewControllerSearchCity new];
+    ViewControllerSevedCities *viewControllerSave = [ViewControllerSevedCities new];
     [viewControllerSearch.tabBarItem setTitle: @"Search city"];
     [viewControllerSave.tabBarItem setTitle:@"Save ciy"];
     [tabBarController setViewControllers:@[viewControllerSearch, viewControllerSave]];

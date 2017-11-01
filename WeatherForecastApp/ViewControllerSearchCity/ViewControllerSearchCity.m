@@ -12,6 +12,9 @@
 #import "Day+CoreDataClass.h"
 #import "Weather+CoreDataClass.h"
 #import "Temperature+CoreDataClass.h"
+#import "ViewControllerWeather.h"
+
+static NSString *titleForHeader = @"City";
 
 @interface ViewControllerSearchCity () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, VRGServicesDelegate>
 
@@ -35,8 +38,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    City *city = self.array[section];
-    return city.name;
+    
+    return titleForHeader;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -44,8 +47,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    City *city = self.array[section];
-    return city.days.count;
+    
+    return self.array.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,16 +62,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    City *city = self.array[indexPath.section];
-    Day *day = city.days[indexPath.row];
-    Weather *weather = [day.weathers anyObject];
-    Temperature *temperature = day.temperature;
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterFullStyle];
-    cell.textLabel.text = [formatter stringFromDate:day.date];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"weather: %@, min temperature: %d, max temperature: %d", weather.main, temperature.minimum, temperature.maximum];
+    City *city = self.array[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    City *city = self.array[indexPath.row];
+    ViewControllerWeather *viewControllerWeather = [[ViewControllerWeather alloc] initWithCity:city];
+    [self presentViewController:viewControllerWeather animated:YES completion:nil];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
