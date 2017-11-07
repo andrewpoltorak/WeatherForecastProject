@@ -24,16 +24,19 @@ static NSString *titleForHeader = @"City";
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) VRGNetworkServices *services;
 
+- (IBAction)saveButtonClicked:(id)sender;
+
 @end
 
 @implementation ViewControllerSearchCity
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
+    self.title = @"Search city";
     
 }
 
@@ -70,7 +73,7 @@ static NSString *titleForHeader = @"City";
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     City *city = self.array[indexPath.row];
     ViewControllerWeather *viewControllerWeather = [[ViewControllerWeather alloc] initWithCity:city];
-    [self presentViewController:viewControllerWeather animated:YES completion:nil];
+    [self.navigationController pushViewController:viewControllerWeather animated:YES];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -83,6 +86,10 @@ static NSString *titleForHeader = @"City";
 - (void)citiesLoaded:(NSArray *)array {
     self.array = array;
     [self.tableView reloadData];
+}
+
+- (IBAction)saveButtonClicked:(id)sender {
+    
 }
 
 @end

@@ -23,10 +23,11 @@
     self.window = [UIWindow new];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     ViewControllerSearchCity *viewControllerSearch = [ViewControllerSearchCity new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewControllerSearch];
     ViewControllerSevedCities *viewControllerSave = [ViewControllerSevedCities new];
-    [viewControllerSearch.tabBarItem setTitle: @"Search city"];
+    [navigationController.tabBarItem setTitle: @"Search city"];
     [viewControllerSave.tabBarItem setTitle:@"Save ciy"];
-    [tabBarController setViewControllers:@[viewControllerSearch, viewControllerSave]];
+    [tabBarController setViewControllers:@[navigationController, viewControllerSave]];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

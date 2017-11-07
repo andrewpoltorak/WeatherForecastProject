@@ -13,6 +13,7 @@
 		4F5C3F2F1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F2D1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib */; };
 		4F5C3F341F9A5F7D0080FFC3 /* ViewControllerWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */; };
 		4F5C3F351F9A5F7D0080FFC3 /* ViewControllerWeather.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */; };
+		4F8344F51FB107AA00E2D1F3 /* Weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8344F41FB107AA00E2D1F3 /* Weather.png */; };
 		4F8BB86E1F8E93C70047EA89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB86D1F8E93C70047EA89 /* main.m */; };
 		4F8BB8711F8E93C70047EA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8701F8E93C70047EA89 /* AppDelegate.m */; };
 		4F8BB87A1F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8781F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 		4F5C3F311F9A5F7D0080FFC3 /* ViewControllerWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerWeather.h; sourceTree = "<group>"; };
 		4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWeather.m; sourceTree = "<group>"; };
 		4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerWeather.xib; sourceTree = "<group>"; };
+		4F8344F41FB107AA00E2D1F3 /* Weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather.png; sourceTree = "<group>"; };
 		4F8BB8691F8E93C70047EA89 /* WeatherForecastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8BB86D1F8E93C70047EA89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F8BB86F1F8E93C70047EA89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		4F8BB86B1F8E93C70047EA89 /* WeatherForecastApp */ = {
 			isa = PBXGroup;
 			children = (
+				4F8344F41FB107AA00E2D1F3 /* Weather.png */,
 				4F8BB86F1F8E93C70047EA89 /* AppDelegate.h */,
 				4F8BB8701F8E93C70047EA89 /* AppDelegate.m */,
 				9E4AB90E1F9B4A4B005C116B /* VRGModels */,
@@ -272,6 +275,7 @@
 				4F5C3F2F1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib in Resources */,
 				4F5C3F231F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib in Resources */,
 				4F8BB87F1F8E93C70047EA89 /* LaunchScreen.storyboard in Resources */,
+				4F8344F51FB107AA00E2D1F3 /* Weather.png in Resources */,
 				4F8BB87C1F8E93C70047EA89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

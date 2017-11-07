@@ -31,11 +31,9 @@
                  City *city = [City MR_importFromObject: dictionary[@"city"] inContext:[NSManagedObjectContext MR_defaultContext]];
                  NSArray *dateArray = [Day MR_importFromArray: dictionary[@"list"] inContext:[NSManagedObjectContext MR_defaultContext]];
                  city.days = [NSOrderedSet orderedSetWithArray:dateArray];
-                 
                  [(NSObject *)self.delegate performSelectorOnMainThread:@selector(citiesLoaded:)
                                                              withObject:@[city]
                                                           waitUntilDone:NO];
-                 
              }];
              
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
