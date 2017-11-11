@@ -25,8 +25,10 @@
     ViewControllerSearchCity *viewControllerSearch = [ViewControllerSearchCity new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewControllerSearch];
     ViewControllerSevedCities *viewControllerSave = [ViewControllerSevedCities new];
-    [navigationController.tabBarItem setTitle: @"Search city"];
-    [viewControllerSave.tabBarItem setTitle:@"Save ciy"];
+    [navigationController.tabBarItem setTitle: @"Search city tab"];
+    [viewControllerSave.tabBarItem setTitle:@"Save city tab"];
+    viewControllerSave.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
+    navigationController.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
     [tabBarController setViewControllers:@[navigationController, viewControllerSave]];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];

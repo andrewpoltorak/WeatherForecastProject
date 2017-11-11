@@ -7,39 +7,49 @@
 //
 
 #import "ViewControllerSevedCities.h"
-
-static NSString *titleForHeader = @"Your saved city";
+#import "City+CoreDataClass.h"
+#import "ViewControllerSearchCity.h"
 
 @interface ViewControllerSevedCities () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *array;
+@property (nonatomic, strong) City * cityFromCell;
 
-- (IBAction)deleteSityButtonClicked:(id)sender;
+- (IBAction)deleteCityButtonClicked:(id)sender;
 
 @end
 
 @implementation ViewControllerSevedCities
 
+- (instancetype)initWithCityName:(City *)city {
+    
+    self = [super init];
+    if (self) {
+        self.cityFromCell = city;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-}
+    self.navigationItem.title = @"Your saved cities";
+    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Delete"
+                                   style:UIBarButtonItemStyleDone
+                                   target:self
+                                   action:@selector(deleteCityButtonClicked:)];
+    self.navigationItem.rightBarButtonItem = deleteButton;
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    return titleForHeader;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.array.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.array.count;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,10 +63,11 @@ static NSString *titleForHeader = @"Your saved city";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.cityFromCell.name];
     return cell;
 }
 
-- (IBAction)deleteSityButtonClicked:(id)sender {
+- (IBAction)deleteCityButtonClicked:(id)sender {
     
 }
 

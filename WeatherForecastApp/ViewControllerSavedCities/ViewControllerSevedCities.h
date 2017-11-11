@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City+CoreDataClass.h"
 
 @interface ViewControllerSevedCities : UIViewController
+
+- (instancetype)initWithCityName: (City *) city;
 
 @end

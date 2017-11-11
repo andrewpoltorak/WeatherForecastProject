@@ -13,6 +13,7 @@
 #import "Weather+CoreDataClass.h"
 #import "Temperature+CoreDataClass.h"
 #import "ViewControllerWeather.h"
+#import "ViewControllerSevedCities.h"
 
 static NSString *titleForHeader = @"City";
 
@@ -24,7 +25,7 @@ static NSString *titleForHeader = @"City";
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) VRGNetworkServices *services;
 
-- (IBAction)saveButtonClicked:(id)sender;
+- (IBAction)saveButtonClicked:(UITableViewCell *) cell;
 
 @end
 
@@ -36,8 +37,13 @@ static NSString *titleForHeader = @"City";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
-    self.title = @"Search city";
-    
+    self.navigationItem.title = @"Search city";
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Save"
+                                   style:UIBarButtonItemStyleDone
+                                   target:self
+                                   action:@selector(saveButtonClicked:)];
+    self.navigationItem.rightBarButtonItem = saveButton;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -88,8 +94,12 @@ static NSString *titleForHeader = @"City";
     [self.tableView reloadData];
 }
 
-- (IBAction)saveButtonClicked:(id)sender {
+- (IBAction)saveButtonClicked:(UITableViewCell *) cell {
     
+    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
+    City *city = self.array[indexPath.row];
+    ViewControllerSevedCities *viewControllerSaved = [[ViewControllerSevedCities alloc] initWithCityName:city];
+    [self.navigationController pushViewController:viewControllerSaved animated:YES];
 }
 
 @end
