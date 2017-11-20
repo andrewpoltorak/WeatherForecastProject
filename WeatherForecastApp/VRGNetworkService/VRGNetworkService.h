@@ -1,5 +1,5 @@
 //
-//  VRGNetworkServices.h
+//  VRGNetworkService.h
 //  WeatherForecastApp
 //
 //  Created by Preferiti_mac on 11.10.17.
@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Day+CoreDataClass.h"
 
-@protocol VRGServicesDelegate <NSObject>
+@protocol VRGServiceDelegate <NSObject>
 
 - (void)citiesLoaded:(NSArray *)array;
 
 @end
 
-@interface VRGNetworkServices : NSObject
+@interface VRGNetworkService : NSObject
 
-@property (nonatomic, weak) id <VRGServicesDelegate> delegate;
+@property (nonatomic, weak) id <VRGServiceDelegate> delegate;
 
 - (void) GETRequestWithString:(NSString *)string;
 

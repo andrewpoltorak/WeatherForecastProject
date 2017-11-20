@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "ViewControllerSearchCity.h"
-#import "ViewControllerSevedCities.h"
+#import "ViewControllerSavedCities.h"
 #import "ViewControllerWeather.h"
 
 @interface AppDelegate ()
@@ -23,13 +23,14 @@
     self.window = [UIWindow new];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     ViewControllerSearchCity *viewControllerSearch = [ViewControllerSearchCity new];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewControllerSearch];
-    ViewControllerSevedCities *viewControllerSave = [ViewControllerSevedCities new];
-    [navigationController.tabBarItem setTitle: @"Search city tab"];
-    [viewControllerSave.tabBarItem setTitle:@"Save city tab"];
-    viewControllerSave.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
-    navigationController.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
-    [tabBarController setViewControllers:@[navigationController, viewControllerSave]];
+    ViewControllerSavedCities *viewControllerSave = [ViewControllerSavedCities new];
+    UINavigationController *navigationControllerSearch = [[UINavigationController alloc] initWithRootViewController:viewControllerSearch];
+    UINavigationController *navigationControllerSave = [[UINavigationController alloc] initWithRootViewController:viewControllerSave];
+    [navigationControllerSearch.tabBarItem setTitle: @"Search city tab"];
+    [navigationControllerSave.tabBarItem setTitle:@"Save city tab"];
+    navigationControllerSave.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
+    navigationControllerSearch.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
+    [tabBarController setViewControllers:@[navigationControllerSearch, navigationControllerSave]];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

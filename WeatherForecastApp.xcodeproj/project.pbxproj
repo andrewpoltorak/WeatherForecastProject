@@ -9,17 +9,15 @@
 /* Begin PBXBuildFile section */
 		4F5C3F221F9A5E5B0080FFC3 /* ViewControllerSearchCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F201F9A5E5B0080FFC3 /* ViewControllerSearchCity.m */; };
 		4F5C3F231F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F211F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib */; };
-		4F5C3F2E1F9A5EBA0080FFC3 /* ViewControllerSevedCities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F2C1F9A5EBA0080FFC3 /* ViewControllerSevedCities.m */; };
-		4F5C3F2F1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F2D1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib */; };
 		4F5C3F341F9A5F7D0080FFC3 /* ViewControllerWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */; };
 		4F5C3F351F9A5F7D0080FFC3 /* ViewControllerWeather.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */; };
+		4F70391E1FC3598F0012808B /* VRGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F70391D1FC3598F0012808B /* VRGTableViewCell.m */; };
 		4F8344F51FB107AA00E2D1F3 /* Weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8344F41FB107AA00E2D1F3 /* Weather.png */; };
 		4F8BB86E1F8E93C70047EA89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB86D1F8E93C70047EA89 /* main.m */; };
 		4F8BB8711F8E93C70047EA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8701F8E93C70047EA89 /* AppDelegate.m */; };
 		4F8BB87A1F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8781F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld */; };
 		4F8BB87C1F8E93C70047EA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */; };
 		4F8BB87F1F8E93C70047EA89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8BB87D1F8E93C70047EA89 /* LaunchScreen.storyboard */; };
-		4F8BB8891F8E9BB40047EA89 /* VRGNetworkServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8881F8E9BB30047EA89 /* VRGNetworkServices.m */; };
 		4FA867241F9B889D0095AC21 /* City+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867151F9B889D0095AC21 /* City+CoreDataClass.m */; };
 		4FA867251F9B889D0095AC21 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867171F9B889D0095AC21 /* City+CoreDataProperties.m */; };
 		4FA867261F9B889D0095AC21 /* Day+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867191F9B889D0095AC21 /* Day+CoreDataClass.m */; };
@@ -28,6 +26,9 @@
 		4FA867291F9B889D0095AC21 /* Temperature+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8671F1F9B889D0095AC21 /* Temperature+CoreDataProperties.m */; };
 		4FA8672A1F9B889D0095AC21 /* Weather+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867211F9B889D0095AC21 /* Weather+CoreDataClass.m */; };
 		4FA8672B1F9B889D0095AC21 /* Weather+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867231F9B889D0095AC21 /* Weather+CoreDataProperties.m */; };
+		4FD8ED901FBF6E45002BDF29 /* VRGNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8ED8F1FBF6E45002BDF29 /* VRGNetworkService.m */; };
+		4FD8ED9C1FBF8253002BDF29 /* ViewControllerSavedCities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8ED9A1FBF8253002BDF29 /* ViewControllerSavedCities.m */; };
+		4FD8ED9D1FBF8253002BDF29 /* ViewControllerSavedCities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8ED9B1FBF8253002BDF29 /* ViewControllerSavedCities.xib */; };
 		8EC46F2EB47B1440D1670206 /* libPods-WeatherForecastApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A877234B16C4F2B4DD5799B /* libPods-WeatherForecastApp.a */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +39,12 @@
 		4F5C3F1F1F9A5E5B0080FFC3 /* ViewControllerSearchCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSearchCity.h; sourceTree = "<group>"; };
 		4F5C3F201F9A5E5B0080FFC3 /* ViewControllerSearchCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSearchCity.m; sourceTree = "<group>"; };
 		4F5C3F211F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSearchCity.xib; sourceTree = "<group>"; };
-		4F5C3F2B1F9A5EBA0080FFC3 /* ViewControllerSevedCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSevedCities.h; sourceTree = "<group>"; };
-		4F5C3F2C1F9A5EBA0080FFC3 /* ViewControllerSevedCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSevedCities.m; sourceTree = "<group>"; };
-		4F5C3F2D1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSevedCities.xib; sourceTree = "<group>"; };
 		4F5C3F311F9A5F7D0080FFC3 /* ViewControllerWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerWeather.h; sourceTree = "<group>"; };
 		4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWeather.m; sourceTree = "<group>"; };
 		4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerWeather.xib; sourceTree = "<group>"; };
+		4F70391C1FC3598F0012808B /* VRGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGTableViewCell.h; sourceTree = "<group>"; };
+		4F70391D1FC3598F0012808B /* VRGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGTableViewCell.m; sourceTree = "<group>"; };
+		4F7039251FC35F380012808B /* CellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDelegate.h; sourceTree = "<group>"; };
 		4F8344F41FB107AA00E2D1F3 /* Weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather.png; sourceTree = "<group>"; };
 		4F8BB8691F8E93C70047EA89 /* WeatherForecastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8BB86D1F8E93C70047EA89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,8 +54,6 @@
 		4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8BB87E1F8E93C70047EA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8BB8801F8E93C70047EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F8BB8871F8E9BB30047EA89 /* VRGNetworkServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGNetworkServices.h; sourceTree = "<group>"; };
-		4F8BB8881F8E9BB30047EA89 /* VRGNetworkServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGNetworkServices.m; sourceTree = "<group>"; };
 		4FA867141F9B889D0095AC21 /* City+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataClass.h"; sourceTree = "<group>"; };
 		4FA867151F9B889D0095AC21 /* City+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataClass.m"; sourceTree = "<group>"; };
 		4FA867161F9B889D0095AC21 /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -71,6 +70,11 @@
 		4FA867211F9B889D0095AC21 /* Weather+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataClass.m"; sourceTree = "<group>"; };
 		4FA867221F9B889D0095AC21 /* Weather+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather+CoreDataProperties.h"; sourceTree = "<group>"; };
 		4FA867231F9B889D0095AC21 /* Weather+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4FD8ED8E1FBF6E45002BDF29 /* VRGNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGNetworkService.h; sourceTree = "<group>"; };
+		4FD8ED8F1FBF6E45002BDF29 /* VRGNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGNetworkService.m; sourceTree = "<group>"; };
+		4FD8ED991FBF8253002BDF29 /* ViewControllerSavedCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSavedCities.h; sourceTree = "<group>"; };
+		4FD8ED9A1FBF8253002BDF29 /* ViewControllerSavedCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSavedCities.m; sourceTree = "<group>"; };
+		4FD8ED9B1FBF8253002BDF29 /* ViewControllerSavedCities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSavedCities.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +99,6 @@
 			path = ViewControllerSearchCity;
 			sourceTree = "<group>";
 		};
-		4F5C3F2A1F9A5EBA0080FFC3 /* ViewControllerSavedCities */ = {
-			isa = PBXGroup;
-			children = (
-				4F5C3F2B1F9A5EBA0080FFC3 /* ViewControllerSevedCities.h */,
-				4F5C3F2C1F9A5EBA0080FFC3 /* ViewControllerSevedCities.m */,
-				4F5C3F2D1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib */,
-			);
-			path = ViewControllerSavedCities;
-			sourceTree = "<group>";
-		};
 		4F5C3F301F9A5F7D0080FFC3 /* ViewControllerWeather */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +107,23 @@
 				4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */,
 			);
 			path = ViewControllerWeather;
+			sourceTree = "<group>";
+		};
+		4F70391B1FC3598F0012808B /* VRGTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F70391C1FC3598F0012808B /* VRGTableViewCell.h */,
+				4F70391D1FC3598F0012808B /* VRGTableViewCell.m */,
+			);
+			path = VRGTableViewCell;
+			sourceTree = "<group>";
+		};
+		4F7039241FC35F380012808B /* CellDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F7039251FC35F380012808B /* CellDelegate.h */,
+			);
+			path = CellDelegate;
 			sourceTree = "<group>";
 		};
 		4F8BB8601F8E93C70047EA89 = {
@@ -139,11 +150,13 @@
 				4F8344F41FB107AA00E2D1F3 /* Weather.png */,
 				4F8BB86F1F8E93C70047EA89 /* AppDelegate.h */,
 				4F8BB8701F8E93C70047EA89 /* AppDelegate.m */,
+				4FD8ED8D1FBF6E45002BDF29 /* VRGNetworkService */,
 				9E4AB90E1F9B4A4B005C116B /* VRGModels */,
-				4F8BB8861F8E9B960047EA89 /* VRGNetworkServices */,
 				4F5C3F1E1F9A5E5B0080FFC3 /* ViewControllerSearchCity */,
-				4F5C3F2A1F9A5EBA0080FFC3 /* ViewControllerSavedCities */,
+				4FD8ED981FBF8253002BDF29 /* ViewControllerSavedCities */,
 				4F5C3F301F9A5F7D0080FFC3 /* ViewControllerWeather */,
+				4F70391B1FC3598F0012808B /* VRGTableViewCell */,
+				4F7039241FC35F380012808B /* CellDelegate */,
 				4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */,
 				4F8BB87D1F8E93C70047EA89 /* LaunchScreen.storyboard */,
 				4F8BB8801F8E93C70047EA89 /* Info.plist */,
@@ -161,13 +174,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4F8BB8861F8E9B960047EA89 /* VRGNetworkServices */ = {
+		4FD8ED8D1FBF6E45002BDF29 /* VRGNetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				4F8BB8871F8E9BB30047EA89 /* VRGNetworkServices.h */,
-				4F8BB8881F8E9BB30047EA89 /* VRGNetworkServices.m */,
+				4FD8ED8E1FBF6E45002BDF29 /* VRGNetworkService.h */,
+				4FD8ED8F1FBF6E45002BDF29 /* VRGNetworkService.m */,
 			);
-			path = VRGNetworkServices;
+			path = VRGNetworkService;
+			sourceTree = "<group>";
+		};
+		4FD8ED981FBF8253002BDF29 /* ViewControllerSavedCities */ = {
+			isa = PBXGroup;
+			children = (
+				4FD8ED991FBF8253002BDF29 /* ViewControllerSavedCities.h */,
+				4FD8ED9A1FBF8253002BDF29 /* ViewControllerSavedCities.m */,
+				4FD8ED9B1FBF8253002BDF29 /* ViewControllerSavedCities.xib */,
+			);
+			path = ViewControllerSavedCities;
 			sourceTree = "<group>";
 		};
 		9E4AB90E1F9B4A4B005C116B /* VRGModels */ = {
@@ -272,7 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5C3F351F9A5F7D0080FFC3 /* ViewControllerWeather.xib in Resources */,
-				4F5C3F2F1F9A5EBA0080FFC3 /* ViewControllerSevedCities.xib in Resources */,
+				4FD8ED9D1FBF8253002BDF29 /* ViewControllerSavedCities.xib in Resources */,
 				4F5C3F231F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib in Resources */,
 				4F8BB87F1F8E93C70047EA89 /* LaunchScreen.storyboard in Resources */,
 				4F8344F51FB107AA00E2D1F3 /* Weather.png in Resources */,
@@ -347,9 +370,10 @@
 				4F8BB87A1F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld in Sources */,
 				4FA867261F9B889D0095AC21 /* Day+CoreDataClass.m in Sources */,
 				4FA867251F9B889D0095AC21 /* City+CoreDataProperties.m in Sources */,
-				4F5C3F2E1F9A5EBA0080FFC3 /* ViewControllerSevedCities.m in Sources */,
-				4F8BB8891F8E9BB40047EA89 /* VRGNetworkServices.m in Sources */,
 				4FA867291F9B889D0095AC21 /* Temperature+CoreDataProperties.m in Sources */,
+				4FD8ED901FBF6E45002BDF29 /* VRGNetworkService.m in Sources */,
+				4FD8ED9C1FBF8253002BDF29 /* ViewControllerSavedCities.m in Sources */,
+				4F70391E1FC3598F0012808B /* VRGTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,12 +1,12 @@
 //
-//  VRGNetworkServices.m
+//  VRGNetworkService.m
 //  WeatherForecastApp
 //
 //  Created by Preferiti_mac on 11.10.17.
 //  Copyright © 2017 Admin. All rights reserved.
 //
 
-#import "VRGNetworkServices.h"
+#import "VRGNetworkService.h"
 #import "AFNetworking.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "City+CoreDataClass.h"
@@ -14,7 +14,7 @@
 #import "Temperature+CoreDataClass.h"
 #import "Weather+CoreDataClass.h"
 
-@implementation VRGNetworkServices
+@implementation VRGNetworkService
 
 - (void) GETRequestWithString:(NSString *)string {
     

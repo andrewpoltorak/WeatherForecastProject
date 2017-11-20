@@ -7,25 +7,28 @@
 //
 
 #import "ViewControllerSearchCity.h"
-#import "VRGNetworkServices.h"
+#import "VRGNetworkService.h"
 #import "City+CoreDataClass.h"
 #import "Day+CoreDataClass.h"
 #import "Weather+CoreDataClass.h"
 #import "Temperature+CoreDataClass.h"
 #import "ViewControllerWeather.h"
-#import "ViewControllerSevedCities.h"
+#import "ViewControllerSavedCities.h"
+#import "VRGTableViewCell.h"
+#import "CellDelegate.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 static NSString *titleForHeader = @"City";
 
-@interface ViewControllerSearchCity () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, VRGServicesDelegate>
+@interface ViewControllerSearchCity () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, VRGServiceDelegate, CellDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
-
+@property (nonatomic, strong) NSNumber * indexOfCell;
 @property (nonatomic, strong) NSArray *array;
-@property (nonatomic, strong) VRGNetworkServices *services;
+@property (nonatomic, strong) VRGNetworkService *service;
 
-- (IBAction)saveButtonClicked:(UITableViewCell *) cell;
+- (IBAction)saveButtonClicked:(id) sender;
 
 @end
 
@@ -47,7 +50,6 @@ static NSString *titleForHeader = @"City";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
     return titleForHeader;
 }
 
@@ -66,11 +68,11 @@ static NSString *titleForHeader = @"City";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    VRGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell = [[VRGTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    
+    cell.cellDelegate = self;
     City *city = self.array[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
     return cell;
@@ -83,9 +85,9 @@ static NSString *titleForHeader = @"City";
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    self.services = [[VRGNetworkServices alloc] init];
-    self.services.delegate = self;
-    [self.services GETRequestWithString:searchBar.text];
+    self.service = [[VRGNetworkService alloc] init];
+    self.service.delegate = self;
+    [self.service GETRequestWithString:searchBar.text];
     [searchBar resignFirstResponder];
 }
 
@@ -94,12 +96,19 @@ static NSString *titleForHeader = @"City";
     [self.tableView reloadData];
 }
 
-- (IBAction)saveButtonClicked:(UITableViewCell *) cell {
-    
-    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-    City *city = self.array[indexPath.row];
-    ViewControllerSevedCities *viewControllerSaved = [[ViewControllerSevedCities alloc] initWithCityName:city];
-    [self.navigationController pushViewController:viewControllerSaved animated:YES];
+- (void)switchChanged: (UITableViewCell *) cell switchState: (BOOL) state {
+    if (state) {
+        NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
+        self.indexOfCell = @(indexPath.row);
+    }
+    else {
+        self.indexOfCell = nil;
+    }
+    [self.tableView reloadData];
+}
+
+- (IBAction)saveButtonClicked:(id)sender {
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end
