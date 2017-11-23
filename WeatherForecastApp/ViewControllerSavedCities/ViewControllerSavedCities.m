@@ -10,14 +10,13 @@
 #import "City+CoreDataClass.h"
 #import "ViewControllerSearchCity.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "VRGTableViewCellSavedCities.h"
 
 @interface ViewControllerSavedCities () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) City *city;
 @property (nonatomic, strong) NSMutableArray *cityArray;
-
-- (IBAction)deleteCityButtonClicked:(id)sender;
 
 @end
 
@@ -28,19 +27,11 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.navigationItem.title = @"Your saved cities";
-    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
-                                     initWithTitle:@"Delete"
-                                     style:UIBarButtonItemStyleDone
-                                     target:self
-                                     action:@selector(deleteCityButtonClicked:)];
-    self.navigationItem.rightBarButtonItem = deleteButton;
-    
 }
 
 -(void)fetchCities {
     //self.cityArray = [NSMutableArray arrayWithArray:[City MR_findAllSortedBy:@"name" ascending:YES]];
     self.cityArray = [NSMutableArray arrayWithArray:[City MR_findAll]];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -63,17 +54,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    VRGTableViewCellSavedCities *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell = [[VRGTableViewCellSavedCities alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    self.city = [self.cityArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.city.name];
+    City * city = [self.cityArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
     return cell;
-}
-
-- (IBAction)deleteCityButtonClicked:(id)sender {
-    
 }
 
 @end

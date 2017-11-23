@@ -15,20 +15,17 @@
 #import "ViewControllerWeather.h"
 #import "ViewControllerSavedCities.h"
 #import "VRGTableViewCell.h"
-#import "CellDelegate.h"
 #import <MagicalRecord/MagicalRecord.h>
 
 static NSString *titleForHeader = @"City";
 
-@interface ViewControllerSearchCity () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, VRGServiceDelegate, CellDelegate>
+@interface ViewControllerSearchCity () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, VRGServiceDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSNumber * indexOfCell;
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) VRGNetworkService *service;
-
-- (IBAction)saveButtonClicked:(id) sender;
 
 @end
 
@@ -41,12 +38,6 @@ static NSString *titleForHeader = @"City";
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
     self.navigationItem.title = @"Search city";
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Save"
-                                   style:UIBarButtonItemStyleDone
-                                   target:self
-                                   action:@selector(saveButtonClicked:)];
-    self.navigationItem.rightBarButtonItem = saveButton;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -58,7 +49,6 @@ static NSString *titleForHeader = @"City";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.array.count;
 }
 
@@ -72,7 +62,6 @@ static NSString *titleForHeader = @"City";
     if (cell == nil) {
         cell = [[VRGTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    cell.cellDelegate = self;
     City *city = self.array[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
     return cell;
@@ -94,21 +83,6 @@ static NSString *titleForHeader = @"City";
 - (void)citiesLoaded:(NSArray *)array {
     self.array = array;
     [self.tableView reloadData];
-}
-
-- (void)switchChanged: (UITableViewCell *) cell switchState: (BOOL) state {
-    if (state) {
-        NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-        self.indexOfCell = @(indexPath.row);
-    }
-    else {
-        self.indexOfCell = nil;
-    }
-    [self.tableView reloadData];
-}
-
-- (IBAction)saveButtonClicked:(id)sender {
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end
