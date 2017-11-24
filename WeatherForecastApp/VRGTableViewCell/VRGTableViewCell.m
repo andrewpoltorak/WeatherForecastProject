@@ -13,7 +13,6 @@
 @interface VRGTableViewCell ()
 
 @property (nonatomic, strong) UILabel *labelCity;
-@property (nonatomic, strong) UIButton *saveButton;
 
 @end
 
@@ -35,17 +34,12 @@
     [self.contentView addSubview:self.labelCity];
     
     self.saveButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [self.saveButton addTarget:self action:@selector(saveButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.saveButton.frame = CGRectMake(380, 30, 20, 20);
     [self.contentView addSubview:self.saveButton];
 }
 
 - (void)updateWithCity: (City *) city {
     self.labelCity.text = city.name;
-}
-
-- (void)saveButtonClicked {
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end

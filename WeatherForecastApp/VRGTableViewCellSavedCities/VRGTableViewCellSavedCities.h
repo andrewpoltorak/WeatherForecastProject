@@ -11,6 +11,7 @@
 
 @interface VRGTableViewCellSavedCities : UITableViewCell
 
+@property (nonatomic, strong) UIButton *deleteButton;
 - (void)updateWithCity: (City *) city;
 
 @end

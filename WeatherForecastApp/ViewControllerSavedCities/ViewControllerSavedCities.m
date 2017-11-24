@@ -15,7 +15,6 @@
 @interface ViewControllerSavedCities () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) City *city;
 @property (nonatomic, strong) NSMutableArray *cityArray;
 
 @end
@@ -30,7 +29,6 @@
 }
 
 -(void)fetchCities {
-    //self.cityArray = [NSMutableArray arrayWithArray:[City MR_findAllSortedBy:@"name" ascending:YES]];
     self.cityArray = [NSMutableArray arrayWithArray:[City MR_findAll]];
 }
 
@@ -58,9 +56,19 @@
     if (cell == nil) {
         cell = [[VRGTableViewCellSavedCities alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    City * city = [self.cityArray objectAtIndex:indexPath.row];
+    City *city = [self.cityArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
+    [cell.deleteButton addTarget:self action:@selector(deleteButtonClicked:forRowAtIndexPath:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)deleteButtonClicked:(UITableView *)tableView forRowAtIndexPath:(NSIndexPath *)indexPath {
+    City *city = [self.cityArray objectAtIndex:indexPath.row];
+    [city MR_deleteEntity];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    [self.cityArray removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadData];
 }
 
 @end

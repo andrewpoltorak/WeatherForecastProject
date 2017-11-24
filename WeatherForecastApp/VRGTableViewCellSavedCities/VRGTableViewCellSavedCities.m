@@ -13,7 +13,6 @@
 @interface VRGTableViewCellSavedCities ()
 
 @property (nonatomic, strong) UILabel *labelCity;
-@property (nonatomic, strong) UIButton *deleteButton;
 
 @end
 
@@ -35,7 +34,6 @@
     [self.contentView addSubview:self.labelCity];
     
     self.deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.deleteButton addTarget:self action:@selector(deleteButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.deleteButton.frame = CGRectMake(320, 30, 70, 35);
     [self.deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
     self.deleteButton.backgroundColor = [UIColor grayColor];
@@ -45,11 +43,6 @@
 
 - (void)updateWithCity: (City *) city {
     self.labelCity.text = city.name;
-}
-
-- (void)deleteButtonClicked {
-    NSPredicate *cityName = [NSPredicate predicateWithFormat: @" SELF CONTAINS %@", @"city"];
-    [City MR_deleteAllMatchingPredicate:cityName];
 }
 
 @end

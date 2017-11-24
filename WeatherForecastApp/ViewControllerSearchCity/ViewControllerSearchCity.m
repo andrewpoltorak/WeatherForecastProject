@@ -23,7 +23,6 @@ static NSString *titleForHeader = @"City";
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, strong) NSNumber * indexOfCell;
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) VRGNetworkService *service;
 
@@ -64,6 +63,7 @@ static NSString *titleForHeader = @"City";
     }
     City *city = self.array[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", city.name];
+    [cell.saveButton addTarget:self action:@selector(saveButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
@@ -83,6 +83,10 @@ static NSString *titleForHeader = @"City";
 - (void)citiesLoaded:(NSArray *)array {
     self.array = array;
     [self.tableView reloadData];
+}
+
+- (void)saveButtonClicked {
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 @end

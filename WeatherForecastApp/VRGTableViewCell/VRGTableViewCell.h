@@ -11,6 +11,7 @@
 
 @interface VRGTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIButton *saveButton;
 - (void)updateWithCity: (City *) city;
 
 @end
