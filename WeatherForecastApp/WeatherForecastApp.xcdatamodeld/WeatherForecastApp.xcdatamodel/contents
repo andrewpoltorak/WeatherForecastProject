@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G1114" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="City" representedClassName="City" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
@@ -11,6 +11,7 @@
                 <entry key="mappedKeyName" value="id"/>
             </userInfo>
         </attribute>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="mappedKeyName" value="name"/>
@@ -68,7 +69,7 @@
         <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="weathers" inverseEntity="Day" syncable="YES"/>
     </entity>
     <elements>
-        <element name="City" positionX="-135" positionY="-54" width="128" height="103"/>
+        <element name="City" positionX="-135" positionY="-54" width="128" height="120"/>
         <element name="Day" positionX="52" positionY="-0" width="128" height="103"/>
         <element name="Temperature" positionX="223" positionY="-45" width="128" height="88"/>
         <element name="Weather" positionX="-135" positionY="180" width="128" height="103"/>

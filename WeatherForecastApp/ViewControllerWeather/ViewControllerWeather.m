@@ -17,7 +17,7 @@
 @interface ViewControllerWeather () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) City * foundCity;
+@property (nonatomic, strong) City * city;
 
 @end
 
@@ -27,7 +27,7 @@
     
     self = [super init];
     if (self) {
-        self.foundCity = city;
+        self.city = city;
     }
     return self;
 }
@@ -39,12 +39,8 @@
     self.title = @"Weathet details";
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.foundCity.days.count;
+    return self.city.days.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +53,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    Day *day = self.foundCity.days[indexPath.row];
+    Day *day = self.city.days[indexPath.row];
     Weather *weather = [day.weathers anyObject];
     Temperature *temperature = day.temperature;
     NSString *icon = weather.icon;
@@ -67,7 +63,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterFullStyle];
     cell.textLabel.text = [formatter stringFromDate:day.date];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"weather: %@, min temp: %d, max temp: %d", weather.main, temperature.minimum, temperature.maximum];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"weather: %@, min temp: %d, max temp: %d", weather.main, (temperature.minimum - 273), (temperature.maximum - 273)];
     return cell;
 }
 

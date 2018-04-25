@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WeatherForecastApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6EC9E568307AC75C28D2F3B7C0D619DB</key>
+		<key>0D5E5E9A9C1AB8FE877B95E8EDBDC6B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91EF7E76745609C86DCC620D322AA0BF</key>
+		<key>0DA29E9C04619EA71C3B63800DB01DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

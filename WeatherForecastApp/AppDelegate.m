@@ -20,19 +20,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupCoreDataStack];
+    
     self.window = [UIWindow new];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
     ViewControllerSearchCity *viewControllerSearch = [ViewControllerSearchCity new];
     ViewControllerSavedCities *viewControllerSave = [ViewControllerSavedCities new];
+    
     UINavigationController *navigationControllerSearch = [[UINavigationController alloc] initWithRootViewController:viewControllerSearch];
     UINavigationController *navigationControllerSave = [[UINavigationController alloc] initWithRootViewController:viewControllerSave];
+    
     [navigationControllerSearch.tabBarItem setTitle: @"Search city tab"];
     [navigationControllerSave.tabBarItem setTitle:@"Save city tab"];
+    
     navigationControllerSave.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
     navigationControllerSearch.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -15);
+    
     [tabBarController setViewControllers:@[navigationControllerSearch, navigationControllerSave]];
+    
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -53,7 +62,6 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    
     [self saveContext];
 }
 

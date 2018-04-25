@@ -4,4 +4,5 @@ target 'WeatherForecastApp' do
   pod 'AFNetworking'
   pod 'MagicalRecord'
   pod 'SDWebImage'
+  pod 'Masonry'
 end

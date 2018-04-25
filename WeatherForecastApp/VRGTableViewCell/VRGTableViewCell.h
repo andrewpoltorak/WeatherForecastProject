@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "City+CoreDataClass.h"
+#import "VRGCellDelegate.h"
 
 @interface VRGTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIButton *saveButton;
+@property (nonatomic, weak) id <VRGCellDelegate> cellDelegate;
+
 - (void)updateWithCity: (City *) city;
 
 @end

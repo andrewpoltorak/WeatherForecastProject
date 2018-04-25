@@ -2,7 +2,7 @@
 //  Temperature+CoreDataClass.h
 //  
 //
-//  Created by Preferiti_mac on 21.10.17.
+//  Created by Preferiti_mac on 30.01.18.
 //
 //
 

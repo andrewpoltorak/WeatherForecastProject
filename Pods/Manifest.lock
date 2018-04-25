@@ -17,6 +17,7 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - Masonry (1.1.0)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
@@ -24,13 +25,15 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - MagicalRecord
+  - Masonry
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
 
-PODFILE CHECKSUM: 5f089c5a16a461e2bda342c17dfcf538bee47d77
+PODFILE CHECKSUM: bf7a2cd1b09826a22a685e2e851b9f82e480f96a
 
 COCOAPODS: 1.0.1

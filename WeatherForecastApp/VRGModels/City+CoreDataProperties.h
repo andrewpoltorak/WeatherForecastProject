@@ -2,7 +2,7 @@
 //  City+CoreDataProperties.h
 //  
 //
-//  Created by Preferiti_mac on 21.10.17.
+//  Created by Preferiti_mac on 30.01.18.
 //
 //
 
@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *country;
 @property (nonatomic) int64_t identifier;
 @property (nullable, nonatomic, copy) NSString *name;
+@property (nonatomic) BOOL isFavorite;
 @property (nullable, nonatomic, retain) NSOrderedSet<Day *> *days;
 
 @end

@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F0B2F581FC7455800FF6277 /* VRGTableViewCellSavedCities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B2F571FC7455800FF6277 /* VRGTableViewCellSavedCities.m */; };
+		4F003DA2201B046B00195441 /* VRGSavedCitiesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F003DA1201B046B00195441 /* VRGSavedCitiesTableViewCell.m */; };
+		4F5178F02020BCB400D4963D /* City+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178E12020BCB400D4963D /* City+CoreDataClass.m */; };
+		4F5178F12020BCB400D4963D /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178E32020BCB400D4963D /* City+CoreDataProperties.m */; };
+		4F5178F22020BCB400D4963D /* Day+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178E52020BCB400D4963D /* Day+CoreDataClass.m */; };
+		4F5178F32020BCB400D4963D /* Day+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178E72020BCB400D4963D /* Day+CoreDataProperties.m */; };
+		4F5178F42020BCB400D4963D /* Temperature+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178E92020BCB400D4963D /* Temperature+CoreDataClass.m */; };
+		4F5178F52020BCB400D4963D /* Temperature+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178EB2020BCB400D4963D /* Temperature+CoreDataProperties.m */; };
+		4F5178F62020BCB400D4963D /* Weather+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178ED2020BCB400D4963D /* Weather+CoreDataClass.m */; };
+		4F5178F72020BCB400D4963D /* Weather+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5178EF2020BCB400D4963D /* Weather+CoreDataProperties.m */; };
 		4F5C3F221F9A5E5B0080FFC3 /* ViewControllerSearchCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F201F9A5E5B0080FFC3 /* ViewControllerSearchCity.m */; };
 		4F5C3F231F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C3F211F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib */; };
 		4F5C3F341F9A5F7D0080FFC3 /* ViewControllerWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */; };
@@ -19,14 +27,6 @@
 		4F8BB87A1F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BB8781F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld */; };
 		4F8BB87C1F8E93C70047EA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */; };
 		4F8BB87F1F8E93C70047EA89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8BB87D1F8E93C70047EA89 /* LaunchScreen.storyboard */; };
-		4FA867241F9B889D0095AC21 /* City+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867151F9B889D0095AC21 /* City+CoreDataClass.m */; };
-		4FA867251F9B889D0095AC21 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867171F9B889D0095AC21 /* City+CoreDataProperties.m */; };
-		4FA867261F9B889D0095AC21 /* Day+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867191F9B889D0095AC21 /* Day+CoreDataClass.m */; };
-		4FA867271F9B889D0095AC21 /* Day+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8671B1F9B889D0095AC21 /* Day+CoreDataProperties.m */; };
-		4FA867281F9B889D0095AC21 /* Temperature+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8671D1F9B889D0095AC21 /* Temperature+CoreDataClass.m */; };
-		4FA867291F9B889D0095AC21 /* Temperature+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8671F1F9B889D0095AC21 /* Temperature+CoreDataProperties.m */; };
-		4FA8672A1F9B889D0095AC21 /* Weather+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867211F9B889D0095AC21 /* Weather+CoreDataClass.m */; };
-		4FA8672B1F9B889D0095AC21 /* Weather+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA867231F9B889D0095AC21 /* Weather+CoreDataProperties.m */; };
 		4FD8ED901FBF6E45002BDF29 /* VRGNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8ED8F1FBF6E45002BDF29 /* VRGNetworkService.m */; };
 		4FD8ED9C1FBF8253002BDF29 /* ViewControllerSavedCities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8ED9A1FBF8253002BDF29 /* ViewControllerSavedCities.m */; };
 		4FD8ED9D1FBF8253002BDF29 /* ViewControllerSavedCities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8ED9B1FBF8253002BDF29 /* ViewControllerSavedCities.xib */; };
@@ -37,14 +37,31 @@
 		1F20A6188D6F15487769DC01 /* Pods-WeatherForecastApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherForecastApp/Pods-WeatherForecastApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3A877234B16C4F2B4DD5799B /* libPods-WeatherForecastApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherForecastApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453E3A4501E4BC48203EDDF9 /* Pods-WeatherForecastApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherForecastApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherForecastApp/Pods-WeatherForecastApp.release.xcconfig"; sourceTree = "<group>"; };
-		4F0B2F561FC7455800FF6277 /* VRGTableViewCellSavedCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGTableViewCellSavedCities.h; sourceTree = "<group>"; };
-		4F0B2F571FC7455800FF6277 /* VRGTableViewCellSavedCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGTableViewCellSavedCities.m; sourceTree = "<group>"; };
+		4F003DA0201B046B00195441 /* VRGSavedCitiesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGSavedCitiesTableViewCell.h; sourceTree = "<group>"; };
+		4F003DA1201B046B00195441 /* VRGSavedCitiesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGSavedCitiesTableViewCell.m; sourceTree = "<group>"; };
+		4F5178E02020BCB400D4963D /* City+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataClass.h"; sourceTree = "<group>"; };
+		4F5178E12020BCB400D4963D /* City+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataClass.m"; sourceTree = "<group>"; };
+		4F5178E22020BCB400D4963D /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F5178E32020BCB400D4963D /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F5178E42020BCB400D4963D /* Day+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Day+CoreDataClass.h"; sourceTree = "<group>"; };
+		4F5178E52020BCB400D4963D /* Day+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Day+CoreDataClass.m"; sourceTree = "<group>"; };
+		4F5178E62020BCB400D4963D /* Day+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Day+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F5178E72020BCB400D4963D /* Day+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Day+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F5178E82020BCB400D4963D /* Temperature+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temperature+CoreDataClass.h"; sourceTree = "<group>"; };
+		4F5178E92020BCB400D4963D /* Temperature+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Temperature+CoreDataClass.m"; sourceTree = "<group>"; };
+		4F5178EA2020BCB400D4963D /* Temperature+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temperature+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F5178EB2020BCB400D4963D /* Temperature+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Temperature+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F5178EC2020BCB400D4963D /* Weather+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather+CoreDataClass.h"; sourceTree = "<group>"; };
+		4F5178ED2020BCB400D4963D /* Weather+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataClass.m"; sourceTree = "<group>"; };
+		4F5178EE2020BCB400D4963D /* Weather+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F5178EF2020BCB400D4963D /* Weather+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4F5C3F1F1F9A5E5B0080FFC3 /* ViewControllerSearchCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSearchCity.h; sourceTree = "<group>"; };
 		4F5C3F201F9A5E5B0080FFC3 /* ViewControllerSearchCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSearchCity.m; sourceTree = "<group>"; };
 		4F5C3F211F9A5E5B0080FFC3 /* ViewControllerSearchCity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSearchCity.xib; sourceTree = "<group>"; };
 		4F5C3F311F9A5F7D0080FFC3 /* ViewControllerWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerWeather.h; sourceTree = "<group>"; };
 		4F5C3F321F9A5F7D0080FFC3 /* ViewControllerWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWeather.m; sourceTree = "<group>"; };
 		4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerWeather.xib; sourceTree = "<group>"; };
+		4F6294312022055700A066DA /* VRGCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCellDelegate.h; sourceTree = "<group>"; };
 		4F70391C1FC3598F0012808B /* VRGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGTableViewCell.h; sourceTree = "<group>"; };
 		4F70391D1FC3598F0012808B /* VRGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGTableViewCell.m; sourceTree = "<group>"; };
 		4F8344F41FB107AA00E2D1F3 /* Weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather.png; sourceTree = "<group>"; };
@@ -56,27 +73,12 @@
 		4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8BB87E1F8E93C70047EA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8BB8801F8E93C70047EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FA867141F9B889D0095AC21 /* City+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataClass.h"; sourceTree = "<group>"; };
-		4FA867151F9B889D0095AC21 /* City+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataClass.m"; sourceTree = "<group>"; };
-		4FA867161F9B889D0095AC21 /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4FA867171F9B889D0095AC21 /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
-		4FA867181F9B889D0095AC21 /* Day+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Day+CoreDataClass.h"; sourceTree = "<group>"; };
-		4FA867191F9B889D0095AC21 /* Day+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Day+CoreDataClass.m"; sourceTree = "<group>"; };
-		4FA8671A1F9B889D0095AC21 /* Day+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Day+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4FA8671B1F9B889D0095AC21 /* Day+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Day+CoreDataProperties.m"; sourceTree = "<group>"; };
-		4FA8671C1F9B889D0095AC21 /* Temperature+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temperature+CoreDataClass.h"; sourceTree = "<group>"; };
-		4FA8671D1F9B889D0095AC21 /* Temperature+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Temperature+CoreDataClass.m"; sourceTree = "<group>"; };
-		4FA8671E1F9B889D0095AC21 /* Temperature+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Temperature+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4FA8671F1F9B889D0095AC21 /* Temperature+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Temperature+CoreDataProperties.m"; sourceTree = "<group>"; };
-		4FA867201F9B889D0095AC21 /* Weather+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather+CoreDataClass.h"; sourceTree = "<group>"; };
-		4FA867211F9B889D0095AC21 /* Weather+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataClass.m"; sourceTree = "<group>"; };
-		4FA867221F9B889D0095AC21 /* Weather+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weather+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4FA867231F9B889D0095AC21 /* Weather+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Weather+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4FD8ED8E1FBF6E45002BDF29 /* VRGNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGNetworkService.h; sourceTree = "<group>"; };
 		4FD8ED8F1FBF6E45002BDF29 /* VRGNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGNetworkService.m; sourceTree = "<group>"; };
 		4FD8ED991FBF8253002BDF29 /* ViewControllerSavedCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSavedCities.h; sourceTree = "<group>"; };
 		4FD8ED9A1FBF8253002BDF29 /* ViewControllerSavedCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSavedCities.m; sourceTree = "<group>"; };
 		4FD8ED9B1FBF8253002BDF29 /* ViewControllerSavedCities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSavedCities.xib; sourceTree = "<group>"; };
+		4FF3CFF7202247B6008E9273 /* VRGSavedCitiesCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGSavedCitiesCellDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F0B2F551FC7455800FF6277 /* VRGTableViewCellSavedCities */ = {
+		4F003D9F201B046B00195441 /* VRGSavedCitiesTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				4F0B2F561FC7455800FF6277 /* VRGTableViewCellSavedCities.h */,
-				4F0B2F571FC7455800FF6277 /* VRGTableViewCellSavedCities.m */,
+				4F003DA0201B046B00195441 /* VRGSavedCitiesTableViewCell.h */,
+				4F003DA1201B046B00195441 /* VRGSavedCitiesTableViewCell.m */,
 			);
-			path = VRGTableViewCellSavedCities;
+			path = VRGSavedCitiesTableViewCell;
 			sourceTree = "<group>";
 		};
 		4F5C3F1E1F9A5E5B0080FFC3 /* ViewControllerSearchCity */ = {
@@ -118,6 +120,14 @@
 				4F5C3F331F9A5F7D0080FFC3 /* ViewControllerWeather.xib */,
 			);
 			path = ViewControllerWeather;
+			sourceTree = "<group>";
+		};
+		4F6294302022055700A066DA /* VRGCellDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4F6294312022055700A066DA /* VRGCellDelegate.h */,
+			);
+			path = VRGCellDelegate;
 			sourceTree = "<group>";
 		};
 		4F70391B1FC3598F0012808B /* VRGTableViewCell */ = {
@@ -159,7 +169,9 @@
 				4FD8ED981FBF8253002BDF29 /* ViewControllerSavedCities */,
 				4F5C3F301F9A5F7D0080FFC3 /* ViewControllerWeather */,
 				4F70391B1FC3598F0012808B /* VRGTableViewCell */,
-				4F0B2F551FC7455800FF6277 /* VRGTableViewCellSavedCities */,
+				4F6294302022055700A066DA /* VRGCellDelegate */,
+				4F003D9F201B046B00195441 /* VRGSavedCitiesTableViewCell */,
+				4FF3CFF6202247B6008E9273 /* VRGSavedCitiesCellDelegate */,
 				4F8BB87B1F8E93C70047EA89 /* Assets.xcassets */,
 				4F8BB87D1F8E93C70047EA89 /* LaunchScreen.storyboard */,
 				4F8BB8801F8E93C70047EA89 /* Info.plist */,
@@ -196,25 +208,33 @@
 			path = ViewControllerSavedCities;
 			sourceTree = "<group>";
 		};
+		4FF3CFF6202247B6008E9273 /* VRGSavedCitiesCellDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4FF3CFF7202247B6008E9273 /* VRGSavedCitiesCellDelegate.h */,
+			);
+			path = VRGSavedCitiesCellDelegate;
+			sourceTree = "<group>";
+		};
 		9E4AB90E1F9B4A4B005C116B /* VRGModels */ = {
 			isa = PBXGroup;
 			children = (
-				4FA867141F9B889D0095AC21 /* City+CoreDataClass.h */,
-				4FA867151F9B889D0095AC21 /* City+CoreDataClass.m */,
-				4FA867161F9B889D0095AC21 /* City+CoreDataProperties.h */,
-				4FA867171F9B889D0095AC21 /* City+CoreDataProperties.m */,
-				4FA867181F9B889D0095AC21 /* Day+CoreDataClass.h */,
-				4FA867191F9B889D0095AC21 /* Day+CoreDataClass.m */,
-				4FA8671A1F9B889D0095AC21 /* Day+CoreDataProperties.h */,
-				4FA8671B1F9B889D0095AC21 /* Day+CoreDataProperties.m */,
-				4FA8671C1F9B889D0095AC21 /* Temperature+CoreDataClass.h */,
-				4FA8671D1F9B889D0095AC21 /* Temperature+CoreDataClass.m */,
-				4FA8671E1F9B889D0095AC21 /* Temperature+CoreDataProperties.h */,
-				4FA8671F1F9B889D0095AC21 /* Temperature+CoreDataProperties.m */,
-				4FA867201F9B889D0095AC21 /* Weather+CoreDataClass.h */,
-				4FA867211F9B889D0095AC21 /* Weather+CoreDataClass.m */,
-				4FA867221F9B889D0095AC21 /* Weather+CoreDataProperties.h */,
-				4FA867231F9B889D0095AC21 /* Weather+CoreDataProperties.m */,
+				4F5178E02020BCB400D4963D /* City+CoreDataClass.h */,
+				4F5178E12020BCB400D4963D /* City+CoreDataClass.m */,
+				4F5178E22020BCB400D4963D /* City+CoreDataProperties.h */,
+				4F5178E32020BCB400D4963D /* City+CoreDataProperties.m */,
+				4F5178E42020BCB400D4963D /* Day+CoreDataClass.h */,
+				4F5178E52020BCB400D4963D /* Day+CoreDataClass.m */,
+				4F5178E62020BCB400D4963D /* Day+CoreDataProperties.h */,
+				4F5178E72020BCB400D4963D /* Day+CoreDataProperties.m */,
+				4F5178E82020BCB400D4963D /* Temperature+CoreDataClass.h */,
+				4F5178E92020BCB400D4963D /* Temperature+CoreDataClass.m */,
+				4F5178EA2020BCB400D4963D /* Temperature+CoreDataProperties.h */,
+				4F5178EB2020BCB400D4963D /* Temperature+CoreDataProperties.m */,
+				4F5178EC2020BCB400D4963D /* Weather+CoreDataClass.h */,
+				4F5178ED2020BCB400D4963D /* Weather+CoreDataClass.m */,
+				4F5178EE2020BCB400D4963D /* Weather+CoreDataProperties.h */,
+				4F5178EF2020BCB400D4963D /* Weather+CoreDataProperties.m */,
 			);
 			path = VRGModels;
 			sourceTree = "<group>";
@@ -361,23 +381,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA867271F9B889D0095AC21 /* Day+CoreDataProperties.m in Sources */,
+				4F5178F72020BCB400D4963D /* Weather+CoreDataProperties.m in Sources */,
+				4F5178F32020BCB400D4963D /* Day+CoreDataProperties.m in Sources */,
+				4F5178F02020BCB400D4963D /* City+CoreDataClass.m in Sources */,
 				4F5C3F341F9A5F7D0080FFC3 /* ViewControllerWeather.m in Sources */,
 				4F5C3F221F9A5E5B0080FFC3 /* ViewControllerSearchCity.m in Sources */,
 				4F8BB8711F8E93C70047EA89 /* AppDelegate.m in Sources */,
-				4FA8672A1F9B889D0095AC21 /* Weather+CoreDataClass.m in Sources */,
-				4F0B2F581FC7455800FF6277 /* VRGTableViewCellSavedCities.m in Sources */,
-				4FA8672B1F9B889D0095AC21 /* Weather+CoreDataProperties.m in Sources */,
-				4FA867281F9B889D0095AC21 /* Temperature+CoreDataClass.m in Sources */,
+				4F5178F52020BCB400D4963D /* Temperature+CoreDataProperties.m in Sources */,
+				4F5178F62020BCB400D4963D /* Weather+CoreDataClass.m in Sources */,
 				4F8BB86E1F8E93C70047EA89 /* main.m in Sources */,
-				4FA867241F9B889D0095AC21 /* City+CoreDataClass.m in Sources */,
 				4F8BB87A1F8E93C70047EA89 /* WeatherForecastApp.xcdatamodeld in Sources */,
-				4FA867261F9B889D0095AC21 /* Day+CoreDataClass.m in Sources */,
-				4FA867251F9B889D0095AC21 /* City+CoreDataProperties.m in Sources */,
-				4FA867291F9B889D0095AC21 /* Temperature+CoreDataProperties.m in Sources */,
 				4FD8ED901FBF6E45002BDF29 /* VRGNetworkService.m in Sources */,
+				4F5178F42020BCB400D4963D /* Temperature+CoreDataClass.m in Sources */,
 				4FD8ED9C1FBF8253002BDF29 /* ViewControllerSavedCities.m in Sources */,
+				4F5178F22020BCB400D4963D /* Day+CoreDataClass.m in Sources */,
 				4F70391E1FC3598F0012808B /* VRGTableViewCell.m in Sources */,
+				4F003DA2201B046B00195441 /* VRGSavedCitiesTableViewCell.m in Sources */,
+				4F5178F12020BCB400D4963D /* City+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
